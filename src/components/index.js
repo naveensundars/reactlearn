@@ -7,5 +7,6 @@ export {default as AxiosClass} from "./ApiConnection/AxiosApi/axiosClass";
 export {default as AxiosFunction} from "./ApiConnection/AxiosApi/axiosFunction";
 export {default as PageFound} from "./PageFound";
 export {default as ContextClass} from "./ContextApi/contextClass";
+export {default as ContextFunction} from "./ContextApi/contextFunction";
 //store
 export { default as store } from './ReduxFunction/redux/store/store';
