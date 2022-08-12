@@ -3,7 +3,7 @@ import ReactDOM from 'react-dom';
 import { NavLink, BrowserRouter as Router, Route, Switch } from "react-router-dom";
 import '../scss/app.scss'
 import * as Files from "./index";
-import { Provider } from 'react-redux'
+import { Provider } from 'react-redux';
 
 class App extends React.Component {
     constructor(props) {
@@ -64,9 +64,13 @@ class App extends React.Component {
                                                 <li><div className="menuList"><NavLink to="/ContextApiFunction">Function</NavLink></div></li>
                                             </ul>
                                         </li>
-                                        <li>
-                                            <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 0 24 24" width="24px" fill="#000000"><path d="M0 0h24v24H0z" fill="none" /><path d="M10 6L8.59 7.41 13.17 12l-4.58 4.59L10 18l6-6z" /></svg>
-                                            <div className="menuList"><NavLink to="/ChildtoParent">Child to Parent</NavLink></div></li>
+                                        <li onClick={(e) => this.menuClick(e)}><div>Curd Sample</div>
+                                            <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 0 24 24" width="24px" fill="#000000"><path d="M0 0h24v24H0z" fill="none" /><path d="M10 6L8.59 7.41 13.17 12l-4.58 4.59L10 18l6-6z" /></svg>            
+                                            <ul className="childMenu">
+                                                <li><div className="menuList"><NavLink to="/CurdSample">Curd Single</NavLink></div></li>
+                                                <li><div className="menuList"><NavLink to="/CurdSampleservice">Curd Service</NavLink></div></li>
+                                            </ul>
+                                        </li>
                                     </ul>
                                 </div>
                                 <div className="contentBodyInner">
@@ -80,6 +84,8 @@ class App extends React.Component {
                                         <Route path="/AxiosFunction" component={Files.AxiosFunction} />
                                         <Route path="/ContextApiClass" component={Files.ContextClass} />
                                         <Route path="/ContextApiFunction" component={Files.ContextFunction} />
+                                        <Route path="/CurdSample" component={Files.CurdSample} />
+                                        <Route path="/CurdSampleservice" component={Files.CurdSampleService} />
                                         <Route component={Files.PageFound} />
                                     </Switch>
                                 </div>

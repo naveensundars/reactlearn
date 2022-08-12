@@ -8,5 +8,7 @@ export {default as AxiosFunction} from "./ApiConnection/AxiosApi/axiosFunction";
 export {default as PageFound} from "./PageFound";
 export {default as ContextClass} from "./ContextApi/contextClass";
 export {default as ContextFunction} from "./ContextApi/contextFunction";
+export {default as CurdSample} from './curdexample/curdexample';
+export {default as CurdSampleService} from './curdexample/curdexampleservice';
 //store
 export { default as store } from './ReduxFunction/redux/store/store';
